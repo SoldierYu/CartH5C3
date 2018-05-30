@@ -352,7 +352,6 @@
     display: none;
 }
 
-
 @keyframes cart04 {
     from {
     }
@@ -361,6 +360,391 @@
     }
 
 }
+
+/*第五屏*/
+.screen05 {
+    background: url("../images/05-bg.png") no-repeat;
+}
+
+.screen05 .content {
+    height: 100%;
+}
+
+.screen05 .content .text {
+    position: absolute;
+    left: 0;
+    bottom: 550px;
+}
+
+.screen05 .content .card {
+    position: absolute;
+    left: 0;
+    bottom: 210px;
+    z-index: 1002;
+}
+
+.screen05 .card .cardImg {
+    position: relative;
+    z-index: 1;
+}
+
+.screen05 .card .cardOrder {
+    position: absolute;
+    left: 130px;
+    top: 0px;
+}
+
+.screen05.now .card .cardOrder {
+    transform: translateY(-80px);
+    transition: all 1s linear 1.2s;
+}
+
+.screen05 .sofa {
+    position: absolute;
+    bottom: 120px;
+    left: 100px;
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.screen05.now .sofa {
+    z-index: 1001;
+    animation: sofa05 1s linear 1.2s forwards;
+}
+
+@keyframes sofa05 {
+    from {
+        transform: translateY(-1000px) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-150px) rotate(45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+}
+
+.screen05 .mouse {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 400px;
+    overflow: hidden;
+}
+
+.screen05 .mouse .hand {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    transform: translateY(500px);
+}
+
+.screen05.now .mouse .hand {
+    transform: none;
+    transition: all 1s linear;
+}
+
+.screen05 .mouse .m1,
+.screen05 .mouse .m2 {
+    position: absolute;
+    bottom: 220px;
+    right: 0;
+}
+
+.screen05 .mouse .m2 {
+    opacity: 1;
+    translate: all 0.2s linear;
+}
+
+.screen05.leaved .sofa {
+    animation: sofa05-06 1s linear 1s;
+}
+
+@keyframes sofa05-06 {
+    from {
+        opacity: 1;
+        transform: rotate(45deg)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(630px) scale(0.2) rotate(45deg);
+    }
+}
+
+/*第六屏*/
+.screen06 {
+    background: url("../images/06-bg.png") no-repeat 25% bottom;
+}
+
+.screen06.now {
+    background: url("../images/06-bg.png") no-repeat 100% bottom;
+    transition: background 1s linear 2s;
+}
+
+.screen06 .cloud {
+    position: absolute;
+    left: 0;
+    top: -150px;
+}
+
+.screen06 .cloud img:last-child {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    animation: cloud06 20s linear infinite alternate;
+}
+
+.screen06 .cloud img:first-child {
+    animation: cloud06 10s linear infinite alternate;
+}
+
+@keyframes cloud06 {
+    from {
+    }
+    to {
+        transform: translateX(500px);
+    }
+}
+
+.screen06 .text {
+    position: absolute;
+    left: 140px;
+    top: 80px;
+
+}
+
+.screen06 .text img:last-child {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+
+}
+
+.screen06.now .text img:first-child {
+    opacity: 0;
+    transition: all 0.1s linear 4.5s;
+}
+
+.screen06.now .text img:last-child {
+    opacity: 1;
+    transition: all 0.5s linear 4.5s;
+}
+
+.screen06 .box {
+    position: absolute;
+    left: 150px;
+    top: 70px;
+    z-index: 1002;
+    opacity: 0;
+}
+
+.screen06.now .box {
+    animation: box06 1.5s linear forwards;
+}
+
+@keyframes box06 {
+    from {
+        opacity: 1;
+        transform: translateX(-300px);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(400px) scale(0.3);
+    }
+}
+
+.screen06 .car {
+    position: absolute;
+    left: 150px;
+    bottom: 0;
+    z-index: 1003;
+}
+
+.screen06 .car img {
+    position: absolute;
+    opacity: 0;
+}
+
+.screen06 .car .carImg {
+    position: relative;
+    opacity: 1;
+}
+
+.screen06.now .car .buyerImg {
+    left: 160px;
+    top: -50px;
+    opacity: 1;
+    transition: all 0.5s linear 2s;
+}
+
+.screen06.now .car .addressImg {
+    left: 160px;
+    top: -50px;
+    opacity: 1;
+    transition: all 0.5s linear 2.5s;
+}
+
+.screen06.now .car .workerImg {
+    left: -20px;
+    bottom: 0;
+    transform-origin: left bottom;
+    animation: worker06 1.5s linear 3s forwards;
+
+}
+
+@keyframes worker06 {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+    33.3% {
+        transform: scale(1);
+    }
+    66.7% {
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(200px, -100px);
+    }
+}
+
+.screen06 .car .sayImg {
+    right: -280px;
+    top: -400px;
+}
+
+.screen06.now .car .sayImg {
+    opacity: 1;
+    transition: all 0.5s linear 4.5s;
+}
+
+.screen06 .person {
+    position: absolute;
+    width: 106px;
+    height: 150px;
+    right: 59px;
+    bottom: 116px;
+}
+
+.screen06 .person .doorImg {
+    position: absolute;
+    opacity: 0;
+}
+
+.screen06.now .person .doorImg {
+    opacity: 1;
+    transition: opacity 0.5s linear 4.5s;
+}
+
+.screen06 .person .personImg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scale(0);
+    transform-origin: right bottom;
+
+}
+
+.screen06.now .person .personImg {
+    transform: none;
+    right: 200px;
+    transition: transform 0.5s linear 4.5s, right 0.5s linear 5s;
+}
+
+.screen07 {
+    background: url("../images/07-bg.png") no-repeat center bottom;
+}
+
+.screen07 .star {
+    position: absolute;
+    left: 204px;
+    top: 141px;
+}
+
+.screen07 .star img {
+    float: left;
+    margin-right: 5px;
+    /*display: none;*/
+    opacity: 0;
+}
+
+.screen07 .star.show img {
+    /*display: none;*/
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+.screen07 .text img {
+    position: absolute;
+    left: 160px;
+    top: 190px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left bottom;
+}
+
+.screen07 .text.show img {
+    opacity: 1;
+    animation: text07 1.5s linear 2.3s forwards;
+}
+
+@keyframes text07 {
+    from {
+    }
+    70% {
+
+        transform: scale(1.2);
+    }
+    to {
+        transform: none;
+    }
+}
+
+.screen08 {
+    background: url("../images/08-bg.png");
+}
+
+.screen08 .btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.screen08 .btn img:last-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.screen08 .btn:hover img:last-child {
+    opacity: 1;
+}
+
+.screen08 .hand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-85px);
+    /*transform: translateX(-50%);*/
+    top: 160px;
+}
+.screen08 .again {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
 
 
 
